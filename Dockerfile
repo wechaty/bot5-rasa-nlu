@@ -7,7 +7,7 @@ WORKDIR /opt/server
 ADD requirements.txt /opt/server
 RUN pip install -r requirements.txt
 
-ADD data /opt/server
+COPY data /opt/server
 ADD config.yml /opt/server
 
 RUN rasa train nlu
