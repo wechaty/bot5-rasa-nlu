@@ -30,6 +30,8 @@ jobs:
         with:
           push: true
           tags: ghcr.io/wechaty/bot5-rasa-nlu:latest
+          cache-from: type=registry,ref=ghcr.io/wechaty/bot5-rasa-nlu:buildcache
+          cache-to: type=registry,ref=ghcr.io/wechaty/bot5-rasa-nlu:buildcache,mode=max
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
