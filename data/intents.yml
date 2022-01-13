@@ -1,0 +1,22 @@
+version: "2.0"
+nlu:
+- intent: affirm
+  examples: |
+    - 是
+    - 是的
+    - 对的
+    - 好的
+    - 没错
+    - 可以啊
+    - 好啊
+- intent: deny
+  examples: |
+    - 不
+    - 不是
+    - 没有
+    - 不对
+    - 不要
+- intent: greet
+  examples: |
+    - 你好
+    - 你好啊
