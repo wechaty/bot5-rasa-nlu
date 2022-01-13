@@ -1,0 +1,2 @@
+rasa = "==2.8.21"
+rasa-paddlenlp = "==0.2.0"

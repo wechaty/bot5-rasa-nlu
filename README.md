@@ -22,6 +22,13 @@ docker build -t bot5-rasa-nlu .
 docker run -p 5005:5005 ghcr.io/wechaty/bot5-rasa-nlu:latest
 ```
 
+## 接口
+
+详情请查阅：
+
+- [Rasa官方文档](https://rasa.com/docs/rasa/2.x/nlu-only#running-an-nlu-server)
+- [Rasa API文档](https://rasa.com/docs/rasa/pages/http-api#operation/parseModelMessage)
+
 ## GitHub Actions
 
 当前项目将会自动构建main分支到GitHub Container Registry，并在GitHub Actions上构建镜像。需要配置一个Personal Access Token，请访问[对应GitHub文档](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)查看如何获取。

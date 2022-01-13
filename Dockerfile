@@ -6,8 +6,8 @@ RUN pip install pipenv==2022.1.8
 
 WORKDIR /opt/server
 
-ADD Pipfile /opt/server
-RUN pipenv install --skip-lock --system --sequential --verbose
+ADD requirements.txt /opt/server
+RUN pip install -r requirements.txt
 
 ADD data /opt/server
 ADD config.yml /opt/server
