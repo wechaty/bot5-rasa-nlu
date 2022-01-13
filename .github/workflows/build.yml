@@ -3,9 +3,8 @@ name: Train and Build
 on:
   # run it on push to the default repository branch
   push:
-    branches: [main]
-  # run it during pull request
-  pull_request:
+    branches:
+      - main
 
 jobs:
   docker:
@@ -29,8 +28,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          # build on feature branches, push only on main branch
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: true
           tags: ghcr.io/wechaty/bot5-rasa-nlu:latest
       -
         name: Image digest
